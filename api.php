@@ -12,7 +12,8 @@ Route::post('authorization', [\App\Http\Controllers\AuthController::class, 'logi
 
 Route::middleware(['auth:sanctum'])->group(function(){
     Route::get('logout', [\App\Http\Controllers\AuthController::class, 'logout']);
-
+    Route::get('search', [SearchController::class, 'search']);
+    
     Route::get('gagarin-flight', [\App\Http\Controllers\GagarinInfo::class, 'index']);
     Route::get('flight', [\App\Http\Controllers\FlightnInfo::class, 'index']);
 
